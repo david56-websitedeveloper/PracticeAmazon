@@ -1,0 +1,230 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f2f2;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #007185;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    background-color: #f3a847;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007185;
+}
+
+.contact {
+    background-color: #f3a847;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.hero {
+    background-color: #a8e6cf;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.appliance-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.appliance-images img {
+    max-height: 200px;
+    margin: 0 10px;
+}
+
+.arrows button {
+    background-color: #007185;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.category {
+    text-align: center;
+    width: 20%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.category-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-images img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.featured-products {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    background-color: #007185;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.testimonials {
+    background-color: #f0f2f2;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.testimonial {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+}
+
+.testimonial .author {
+    font-style: italic;
+    color: #666;
+}
+
+footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 10px;
+}
