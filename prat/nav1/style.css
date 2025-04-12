@@ -1,0 +1,48 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background-color: rgba(0, 132, 255, 0.336);
+  height: 100vh;
+  width: 100vw;
+}
+
+.navabr {
+  background-color: rgba(245, 245, 250, 0.788);
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(40, 36, 248, 0.171);
+  padding: 0 40px;
+}
+
+.navabr__logo img {
+  height: 50px;
+}
+
+.navabr__menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navabr__menu a {
+  font-size: 16px;
+  color: rgba(24, 69, 219, 0.863);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.navabr__menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
