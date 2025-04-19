@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.navbar{
+background-color: #e6e3e3;
+width: 100%;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+z-index: 10000;
+position: sticky;
+top: 0;
+
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     cursor: pointer;
+}
+
+.nav-links{
+    display: flex;
+    gap: 26px;
+     cursor: pointer;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+     cursor: pointer;
+}
+
+.menu-toggle{
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+

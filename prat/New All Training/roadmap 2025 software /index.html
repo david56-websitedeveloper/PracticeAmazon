@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Roadmap & Routine 2024</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e40af;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #94a3b8;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    
+    body {
+      background-color: #f1f5f9;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray);
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin: 1.5rem 0 0.5rem;
+    }
+    
+    section {
+      background: white;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    ul {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .roadmap-card {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+    }
+    
+    .routine-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .time-block {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      color: white;
+    }
+    
+    .morning { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .midday { background: linear-gradient(135deg, #10b981, #047857); }
+    .afternoon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .evening { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .tip-card {
+      background: #f8fafc;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+    
+    .tip-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .resources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .resource-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .resource-btn:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      color: var(--gray);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Software Developer Roadmap & Routine 2024</h1>
+      <p>Your guide to structured learning and productivity</p>
+    </header>
+    
+    <!-- Roadmap Section -->
+    <section id="roadmap">
+      <h2>🚀 Software Developer Roadmap (2024)</h2>
+      
+      <div class="roadmap-grid">
+        <!-- Foundational Skills -->
+        <div class="roadmap-card">
+          <h3>1. Foundational Skills</h3>
+          <ul>
+            <li><strong>Programming Languages:</strong> Python, JavaScript, Java, C#, Go, or Rust</li>
+            <li><strong>Data Structures & Algorithms</strong></li>
+            <li><strong>Version Control:</strong> Git + GitHub/GitLab</li>
+            <li><strong>Basic DevOps:</strong> CLI, SSH, Docker, CI/CD</li>
+            <li><strong>Databases:</strong> SQL + NoSQL</li>
+          </ul>
+        </div>
+        
+        <!-- Specialization Paths -->
+        <div class="roadmap-card">
+          <h3>2. Specialization Paths</h3>
+          <ul>
+            <li><strong>Frontend:</strong> React/Vue, TypeScript, CSS</li>
+            <li><strong>Backend:</strong> APIs, Node.js, Spring, Django</li>
+            <li><strong>Full-Stack:</strong> Frontend + Backend</li>
+            <li><strong>DevOps/Cloud:</strong> AWS, Kubernetes, Terraform</li>
+            <li><strong>Data Engineering:</strong> Spark, Airflow, ETL</li>
+            <li><strong>Mobile:</strong> Flutter, React Native</li>
+          </ul>
+        </div>
+        
+        <!-- Advanced Topics -->
+        <div class="roadmap-card">
+          <h3>3. Advanced Topics</h3>
+          <ul>
+            <li><strong>System Design:</strong> Scalability, distributed systems</li>
+            <li><strong>Testing:</strong> Unit, integration, E2E</li>
+            <li><strong>Security:</strong> OWASP, authentication</li>
+            <li><strong>Soft Skills:</strong> Agile, documentation</li>
+          </ul>
+        </div>
+        
+        <!-- Keep Learning -->
+        <div class="roadmap-card">
+          <h3>4. Keep Learning</h3>
+          <ul>
+            <li>Follow tech blogs/news</li>
+            <li>Contribute to open-source</li>
+            <li>Learn AI/ML basics</li>
+            <li>Build personal projects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Routine Section -->
+    <section id="routine">
+      <h2>⏰ Daily Routine for Productivity</h2>
+      
+      <div class="routine-timeline">
+        <!-- Morning -->
+        <div class="time-block morning">
+          <h3 style="color: orangered;">🌅 Morning (Deep Work)</h3>
+          <ul>
+            <li>7:00 AM: Wake up, exercise, breakfast</li>
+            <li>8:00 AM: Review tasks, plan day</li>
+            <li>8:30 AM: Coding, debugging, design</li>
+            <li>10:30 AM: Break + coffee</li>
+          </ul>
+        </div>
+        
+        <!-- Midday -->
+        <div class="time-block midday">
+          <h3 style="color: orangered;">☀️ Midday (Collaboration)</h3>
+          <ul>
+            <li>11:00 AM: Meetings, standups</li>
+            <li>12:30 PM: Lunch + walk</li>
+          </ul>
+        </div>
+        
+        <!-- Afternoon -->
+        <div class="time-block afternoon">
+          <h3 style="color: orangered;">🌇 Afternoon (Learning)</h3>
+          <ul>
+            <li>1:30 PM: Small tasks, bugs</li>
+            <li>3:00 PM: Learn new skills</li>
+            <li>4:00 PM: Finalize PRs</li>
+          </ul>
+        </div>
+        
+        <!-- Evening -->
+        <div class="time-block evening">
+          <h3 style="color: orangered;">🌃 Evening (Relax)</h3>
+          <ul>
+            <li>6:00 PM: Hobby time</li>
+            <li>8:00 PM: Reflect, journal</li>
+            <li>10:30 PM: Sleep</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tips Section -->
+    <section id="tips">
+      <h2> 💡 Tips for Success</h2>
+      
+      <div class="tips-grid">
+        <div class="tip-card">
+          <i class="fas fa-code"></i>
+          <h3>Code Daily</h3>
+          <p>Even 30 minutes of practice matters</p>
+        </div>
+        
+        <div class="tip-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Build Projects</h3>
+          <p>Apply skills to real-world problems</p>
+        </div>
+        
+        <div class="tip-card">
+          <i class="fas fa-users"></i>
+          <h3>Network</h3>
+          <p>Engage in dev communities</p>
+        </div>
+        
+        <div class="tip-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Health First</h3>
+          <p>Avoid burnout, sleep well</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section id="resources">
+      <h2>📚 Resources</h2>
+      
+      <div class="resources">
+        <a href="https://roadmap.sh" class="resource-btn" target="_blank">roadmap.sh</a>
+        <a href="https://leetcode.com" class="resource-btn" target="_blank">LeetCode</a>
+        <a href="https://freecodecamp.org" class="resource-btn" target="_blank">FreeCodeCamp</a>
+        <a href="https://dev.to" class="resource-btn" target="_blank">Dev.to</a>
+        <a href="https://github.com" class="resource-btn" target="_blank">GitHub</a>
+      </div>
+    </section>
+    
+    <footer>
+      <p>Made with ❤️ for developers | Adjust based on your goals (FAANG, startups, freelancing)</p>
+      <p>Consistency beats intensity! 🚀</p>
+    </footer>
+  </div>
+</body>
+</html>

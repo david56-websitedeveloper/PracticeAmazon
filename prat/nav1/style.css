@@ -1,4 +1,4 @@
-
+/* 
 
 * {
   margin: 0;
@@ -45,4 +45,52 @@
 
 .navabr__menu a:hover {
   background-color: rgba(255, 255, 255, 0.2);
+} */
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e1e2f;
+  color: white;
+}
+
+.logo_img img {
+  height: 50px;
+ 
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #00bcd4;
 }

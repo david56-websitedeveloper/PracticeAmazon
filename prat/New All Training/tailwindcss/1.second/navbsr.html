@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="navbsr.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">LOgo <span>K</span><img src="" alt="logo"></div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">SErvices</a>
+                <a href="#">COntract</a>
+            </nav>
+
+            <button class="menu-toggle" onclick="menu()">☰</button>
+        </div>
+    </header>
+
+    <script>
+      const menuBar =  document.querySelector('.nav-links');
+function menu() {
+        menuBar.classList.toggle('active');
+}
+
+    </script>
+</body>
+</html>

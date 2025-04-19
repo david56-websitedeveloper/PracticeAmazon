@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript & Tailwind CSS Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <h1 class="text-3xl font-semibold text-center text-blue-600 mb-8">JavaScript & Tailwind CSS Projects</h1>
+
+    <div class="space-y-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 1: Simple Counter</h2>
+            <p class="text-gray-600 mb-4">A basic counter application to demonstrate dynamic element updates.</p>
+            <div class="flex items-center justify-center space-x-4">
+                <button id="counter-increment" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Increment</button>
+                <span id="counter-value" class="text-xl font-semibold">0</span>
+                <button id="counter-decrement" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Decrement</button>
+            </div>
+            <script>
+                let counterValue = 0;
+                const counterDisplay = document.getElementById('counter-value');
+                const incrementButton = document.getElementById('counter-increment');
+                const decrementButton = document.getElementById('counter-decrement');
+
+                incrementButton.addEventListener('click', () => {
+                    counterValue++;
+                    counterDisplay.textContent = counterValue;
+                });
+
+                decrementButton.addEventListener('click', () => {
+                    counterValue--;
+                    counterDisplay.textContent = counterValue;
+                });
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 2: Interactive List</h2>
+            <p class="text-gray-600 mb-4">A dynamic list where you can add and remove items.</p>
+            <div class="flex items-center space-x-4 mb-4">
+                <input type="text" id="list-input" placeholder="Enter item..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <button id="list-add" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Item</button>
+            </div>
+            <ul id="list-items" class="space-y-2">
+                </ul>
+            <script>
+                const listInput = document.getElementById('list-input');
+                const addButton = document.getElementById('list-add');
+                const listItems = document.getElementById('list-items');
+
+                addButton.addEventListener('click', () => {
+                    const newItemText = listInput.value.trim();
+                    if (newItemText !== "") {
+                        const listItem = document.createElement('li');
+                        listItem.className = "bg-gray-50 border border-gray-200 rounded-md py-2 px-3 flex justify-between items-center";
+                        listItem.textContent = newItemText;
+
+                        const removeButton = document.createElement('button');
+                        removeButton.textContent = "Remove";
+                        removeButton.className = "bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded text-sm";
+                        removeButton.addEventListener('click', () => {
+                            listItem.remove();
+                        });
+
+                        listItem.appendChild(removeButton);
+                        listItems.appendChild(listItem);
+                        listInput.value = ""; // Clear the input
+                    }
+                });
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 3: Simple Calculator</h2>
+            <p class="text-gray-600 mb-4">A basic calculator with addition, subtraction, multiplication, and division.</p>
+            <div class="grid grid-cols-4 gap-2">
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">7</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">8</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">9</button>
+                <button class="calculator-operator bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">/</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">4</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">5</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">6</button>
+                <button class="calculator-operator bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">*</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">1</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">2</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">3</button>
+                <button class="calculator-operator bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">-</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">0</button>
+                <button class="calculator-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">.</button>
+                <button class="calculator-equals bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">=</button>
+                <button class="calculator-operator bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">+</button>
+                <button class="calculator-clear col-span-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">C</button>
+            </div>
+            <div class="mt-4 text-right">
+                <span id="calculator-display" class="text-2xl font-semibold text-gray-800">0</span>
+            </div>
+            <script>
+                let displayValue = '0';
+                let previousValue = null;
+                let operator = null;
+
+                const display = document.getElementById('calculator-display');
+                const buttons = document.querySelectorAll('.calculator-button');
+                const operators = document.querySelectorAll('.calculator-operator');
+                const equals = document.querySelector('.calculator-equals');
+                const clear = document.querySelector('.calculator-clear');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        if (displayValue === '0' || displayValue === 'Infinity' || displayValue === '-Infinity' || isNaN(parseFloat(displayValue))) {
+                            displayValue = button.textContent;
+                        } else {
+                            displayValue += button.textContent;
+                        }
+                        updateDisplay();
+                    });
+                });
+
+                operators.forEach(op => {
+                    op.addEventListener('click', () => {
+                        if (operator !== null && previousValue !== null) {
+                            calculate();
+                        }
+                        previousValue = parseFloat(displayValue);
+                        operator = op.textContent;
+                        displayValue = '0';
+                        updateDisplay();
+                    });
+                });
+
+                equals.addEventListener('click', () => {
+                    if (operator !== null && previousValue !== null) {
+                        calculate();
+                        operator = null;
+                        previousValue = null;
+                    }
+                });
+
+                clear.addEventListener('click', () => {
+                    displayValue = '0';
+                    previousValue = null;
+                    operator = null;
+                    updateDisplay();
+                });
+
+                function calculate() {
+                    const currentValue = parseFloat(displayValue);
+                    if (operator === '+') {
+                        displayValue = (previousValue + currentValue).toString();
+                    } else if (operator === '-') {
+                        displayValue = (previousValue - currentValue).toString();
+                    } else if (operator === '*') {
+                        displayValue = (previousValue * currentValue).toString();
+                    } else if (operator === '/') {
+                        if (currentValue === 0) {
+                            displayValue = 'Infinity'; // Or handle division by zero error
+                        } else {
+                            displayValue = (previousValue / currentValue).toString();
+                        }
+                    }
+                    updateDisplay();
+                }
+
+                function updateDisplay() {
+                    display.textContent = displayValue;
+                }
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 4: Random Quote Generator</h2>
+            <p class="text-gray-600 mb-4">Generates a random quote on button click.</p>
+            <div class="text-center">
+                <blockquote id="quote-text" class="text-xl italic text-gray-700 mb-4">Click the button to reveal a quote!</blockquote>
+                <p id="quote-author" class="text-md font-semibold text-gray-600 mb-4"></p>
+                <button id="new-quote" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">New Quote</button>
+            </div>
+            <script>
+                const quotes = [
+                    { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+                    { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+                    { text: "Strive not to be a success, but rather to be of value.", author: "Albert Einstein" },
+                    { text: "It always seems impossible until it's done.", author: "Nelson Mandela" },
+                    { text: "The mind is everything. What you think you become.", author: "Buddha" }
+                ];
+
+                const quoteText = document.getElementById('quote-text');
+                const quoteAuthor = document.getElementById('quote-author');
+                const newQuoteButton = document.getElementById('new-quote');
+
+                newQuoteButton.addEventListener('click', () => {
+                    const randomIndex = Math.floor(Math.random() * quotes.length);
+                    const randomQuote = quotes[randomIndex];
+
+                    quoteText.textContent = `“${randomQuote.text}”`;
+                    quoteAuthor.textContent = `- ${randomQuote.author}`;
+                });
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 5: Todo List</h2>
+            <p class="text-gray-600 mb-4">A dynamic todo list where you can add, complete, and delete tasks.</p>
+            <div class="flex items-center space-x-4 mb-4">
+                <input type="text" id="todo-input" placeholder="Enter task..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <button id="todo-add" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Add Task</button>
+            </div>
+            <ul id="todo-list" class="space-y-2">
+                </ul>
+            <script>
+                const todoInput = document.getElementById('todo-input');
+                const todoAddButton = document.getElementById('todo-add');
+                const todoList = document.getElementById('todo-list');
+
+                todoAddButton.addEventListener('click', () => {
+                    const newTodoText = todoInput.value.trim();
+                    if (newTodoText !== "") {
+                        const todoItem = document.createElement('li');
+                        todoItem.className = "bg-gray-50 border border-gray-200 rounded-md py-2 px-3 flex justify-between items-center";
+                        todoItem.textContent = newTodoText;
+
+                        const completeButton = document.createElement('button');
+                        completeButton.textContent = "Complete";
+                        completeButton.className = "bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded text-sm mr-2";
+                        completeButton.addEventListener('click', () => {
+                            todoItem.classList.toggle('completed');
+                            if (todoItem.classList.contains('completed')) {
+                                todoItem.classList.add('line-through', 'text-gray-400');
+                            } else {
+                                todoItem.classList.remove('line-through', 'text-gray-400');
+                            }
+                        });
+
+                        const deleteButton = document.createElement('button');
+                        deleteButton.textContent = "Delete";
+                        deleteButton.className = "bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded text-sm";
+                        deleteButton.addEventListener('click', () => {
+                            todoItem.remove();
+                        });
+
+                        const buttonContainer = document.createElement('div');
+                        buttonContainer.appendChild(completeButton);
+                        buttonContainer.appendChild(deleteButton);
+
+                        todoItem.appendChild(buttonContainer);
+                        todoList.appendChild(todoItem);
+                        todoInput.value = ""; // Clear the input
+                    }
+                });
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 6: Weather App</h2>
+            <p class="text-gray-600 mb-4">A simple weather application that fetches and displays weather data based on user input.</p>
+            <div class="flex items-center space-x-4 mb-4">
+                <input type="text" id="weather-input" placeholder="Enter city..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <button id="weather-search" class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">Search</button>
+            </div>
+            <div id="weather-info" class="hidden">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" id="weather-city">--</h3>
+                    <p class="text-sm text-gray-600 mb-2" id="weather-date"></p>
+                    <img id="weather-icon" src="" alt="Weather Icon" class="mx-auto">
+                    <p class="text-4xl font-bold text-gray-800" id="weather-temp">--°C</p>
+                    <p class="text-lg text-gray-600" id="weather-desc">--</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div>
+                        <h4 class="text-md font-semibold text-gray-700">Humidity: <span id="weather-humidity" class="text-gray-600">--%</span></h4>
+                        <h4 class="text-md font-semibold text-gray-700">Wind Speed: <span id="weather-wind" class="text-gray-600">-- m/s</span></h4>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-semibold text-gray-700">Pressure: <span id="weather-pressure" class="text-gray-600">-- hPa</span></h4>
+                        <h4 class="text-md font-semibold text-gray-700">Visibility: <span id="weather-visibility" class="text-gray-600">-- km</span></h4>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const weatherInput = document.getElementById('weather-input');
+                const weatherSearchButton = document.getElementById('weather-search');
+                const weatherInfo = document.getElementById('weather-info');
+                const weatherCity = document.getElementById('weather-city');
+                const weatherDate = document.getElementById('weather-date');
+                const weatherIcon = document.getElementById('weather-icon');
+                const weatherTemp = document.getElementById('weather-temp');
+                const weatherDesc = document.getElementById('weather-desc');
+                const weatherHumidity = document.getElementById('weather-humidity');
+                const weatherWind = document.getElementById('weather-wind');
+                const weatherPressure = document.getElementById('weather-pressure');
+                const weatherVisibility = document.getElementById('weather-visibility');
+
+                const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+                const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
+
+                weatherSearchButton.addEventListener('click', () => {
+                    const city = weatherInput.value.trim();
+                    if (city !== "") {
+                        fetchWeatherData(city);
+                    }
+                });
+
+                async function fetchWeatherData(city) {
+                    try {
+                        const response = await fetch(`${weatherUrl}?q=${city}&appid=${apiKey}&units=metric`);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const data = await response.json();
+                        updateWeatherInfo(data);
+                    } catch (error) {
+                        console.error("Error fetching weather data:", error);
+                        alert("Failed to fetch weather data. Please check your city and API key.");
+                    }
+                }
+
+                function updateWeatherInfo(data) {
+                    weatherCity.textContent = data.name + ', ' + data.sys.country;
+                    weatherDate.textContent = new Date(data.dt * 1000).toLocaleDateString();
+                    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                    weatherTemp.textContent = Math.round(data.main.temp) + '°C';
+                    weatherDesc.textContent = data.weather[0].description;
+                    weatherHumidity.textContent = data.main.humidity + '%';
+                    weatherWind.textContent = data.wind.speed + ' m/s';
+                    weatherPressure.textContent = data.main.pressure + ' hPa';
+                    weatherVisibility.textContent = (data.visibility / 1000) + ' km'; // Convert to km
+
+                    weatherInfo.classList.remove('hidden');
+                }
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 7: Simple Image Gallery</h2>
+            <p class="text-gray-600 mb-4">A basic image gallery that displays a set of images.</p>
+            <div class="grid grid-cols-3 gap-4" id="image-gallery">
+                </div>
+            <script>
+                const imageGallery = document.getElementById('image-gallery');
+                const images = [
+                    "https://placehold.co/400x300/EEE/31343C",
+                    "https://placehold.co/400x300/EEE/808080",
+                    "https://placehold.co/400x300/EEE/0000FF",
+                    "https://placehold.co/400x300/EEE/FF0000",
+                    "https://placehold.co/400x300/EEE/00FF00",
+                    "https://placehold.co/400x300/EEE/800080",
+                ];
+
+                images.forEach(imageUrl => {
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = "Gallery Image";
+                    img.className = "rounded-md";
+                    imageGallery.appendChild(img);
+                });
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 8: Basic Timer</h2>
+            <p class="text-gray-600 mb-4">A simple timer with start, pause, and reset functionality.</p>
+            <div class="text-center space-y-4">
+                <span id="timer-display" class="text-4xl font-bold text-gray-800">00:00</span>
+                <div class="flex justify-center space-x-4">
+                    <button id="timer-start" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Start</button>
+                    <button id="timer-pause" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Pause</button>
+                    <button id="timer-reset" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Reset</button>
+                </div>
+            </div>
+            <script>
+                let timerInterval;
+                let time = 0;
+                let isRunning = false;
+
+                const timerDisplay = document.getElementById('timer-display');
+                const startButton = document.getElementById('timer-start');
+                const pauseButton = document.getElementById('timer-pause');
+                const resetButton = document.getElementById('timer-reset');
+
+                startButton.addEventListener('click', () => {
+                    if (!isRunning) {
+                        isRunning = true;
+                        timerInterval = setInterval(updateTimer, 1000);
+                    }
+                });
+
+                pauseButton.addEventListener('click', () => {
+                    if (isRunning) {
+                        isRunning = false;
+                        clearInterval(timerInterval);
+                    }
+                });
+
+                resetButton.addEventListener('click', () => {
+                    isRunning = false;
+                    clearInterval(timerInterval);
+                    time = 0;
+                    timerDisplay.textContent = '00:00';
+                });
+
+                function updateTimer() {
+                    time++;
+                    const minutes = Math.floor(time / 60);
+                    const seconds = time % 60;
+                    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                    timerDisplay.textContent = formattedTime;
+                }
+            </script>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project 9: Temperature Converter</h2>
+            <p class="text-gray-600 mb-4">Convert temperatures between Celsius and Fahrenheit.</p>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <input type="number" id="temp-input" placeholder="Enter temperature" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <select id="temp-unit" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="celsius">Celsius</opti
